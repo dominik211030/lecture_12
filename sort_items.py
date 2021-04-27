@@ -13,7 +13,7 @@ def read_row(file_name):
     file_path = os.path.join(cwd_path,file_name)
 
     with open(file_name, "r") as file:
-        soubor = csv.reader(file, delimiter=" \t")
+        soubor = csv.reader(file, delimiter="\t")
 
         for line in soubor:
             row =[int(number)for number in line]
@@ -33,7 +33,7 @@ def read_rows(file_name, row_number):
     with open(file_name, "r") as file:
         soubor = csv.reader(file, delimiter="\t")
 
-        for idx, line  in enumerat(soubor):
+        for idx, line  in enumerate(soubor):
             if idx == row_number:
 
                 row =[int(number)for number in line]
